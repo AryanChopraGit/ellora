@@ -1,0 +1,2677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ellora</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+    <style>
+    @media screen and (min-width:1024px) and (max-width: 1920px){
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        body{
+            margin: 0px;
+            width: 100%;
+            padding: 0%;
+            background: linear-gradient(to bottom,#1A2B44,#455D82);
+            height: auto;
+        }
+        .header{
+            width: 100%;
+            height: 734px;
+        }
+        /* #bg_pic{
+            width: 100%;
+            height: 5200px;
+            z-index: 1;
+            opacity:90%;
+            filter: brightness(40%);
+        } */
+        #navbar{
+            position: absolute;
+            top: 17px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 1000;
+        }
+        #nav{
+            width: 90%;
+            max-width: 1248px;
+            height: 96px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(69, 93, 130, 0.2);
+            gap: 25%;
+            backdrop-filter: blur(10px);
+        }
+        #hyper_collection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav_hyper{
+            width: auto;
+            height: auto;
+            color: white;
+            font-size: 16px;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 400;
+        }
+        #work{
+            border: 3px solid white;
+            width: 134px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 16px;
+            font-family: 'Satoshi', sans-serif;
+      
+        }
+        #star_pic{
+            position: absolute;
+            top: 132px;
+            left: 782px;
+            width: 82px;
+            height: 82px;
+        }
+        #main_content{
+            position: absolute;
+            top: 164px;
+            width: 100%;
+            height: 525px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 150px;
+            z-index: 1;
+        }
+        #left_side_main_content{
+            display: flex;
+            justify-content: center;
+            align-items:start;
+            max-width: 600px;
+            height: auto;
+            flex-wrap: wrap;
+        }
+        #main_heading{
+            font-family: 'Satoshi', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: white;
+        }
+        #you_span{
+            color: #47E747;
+        }
+        #sub_heading{
+            font-family: 'Satoshi', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: white;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        #button_req{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            width: 668px;
+            height: 72px;
+            border-radius: 16px;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: rgba(51, 51, 51, 1);
+            background-color: #47E747;
+        }
+        #person_pic{
+            height: 500px;
+        }
+        #star2_pic{
+            position: absolute;
+            top: 584px;
+            left: 764px;
+            width: 48px;
+            height: 48px;
+        }
+        #circle_dot{
+            position: absolute;
+            top: 200px;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            gap: 450px;
+        }
+        #circle{
+            border-radius: 100%;
+            width: 492px;
+            height: 492px;
+            background-color: rgba(69, 93, 130, 0.2);
+            backdrop-filter: blur(10px);
+            
+        }
+        #dot_pic{
+            backdrop-filter: blur(10px);
+        }
+        #ellora_white_bg{
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #ellora_pic{
+            filter: brightness(100%);
+            width: 56px;
+            height: 56px;
+        }
+        #main{
+             display: flex; 
+            justify-content: center;
+            align-items: center; 
+            position:absolute;
+            top: 800px;
+            width: 100%;
+            height: 4120px;
+            flex-wrap: wrap;
+
+        }
+        .about_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #about_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #about_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .about_info_content{
+            backdrop-filter: blur(10px);
+            width: 544px;
+            height: 300px;
+            z-index: 1;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            display: flex;
+            justify-content: center;
+        }
+        .about_width{
+            width: 100%;
+            max-height: 200px;
+            max-width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 32px;
+        }
+        .about_info_content_title{
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 600;
+            font-size:  32px;
+            color: white;
+            height: auto;
+        }
+        .about_info_content_data{
+            font-family: 'Satoshi', sans-serif;
+            font-size:  16px;
+            color: white;
+            opacity: 70%;
+            height: 300px;
+        }
+        .about_info_content_padding{
+            padding-top: 24px;
+        }
+        .work_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #work_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #work_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .work_info_content{
+            backdrop-filter: blur(10px);
+            width: 410px;
+            height: 364px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            color: white;
+            font-size: 24px;
+            font-family: 'Satoshi', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 0px;
+        }
+        .work_width{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 370px;
+            height: auto;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .work_info_content_image{
+            width: 370px;
+            height: 200px;
+        }
+        .work_info_content_data{
+            font-size: 16px;
+            width: 516px;
+        }
+        #work_box_row{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .work_box{
+            border: 1px solid white;
+            border-radius: 16px;
+            font-size: 14px;
+            padding: 8px;
+        }
+        .about_info_content_header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+        .bold_work{
+            font-weight: 600;
+        }
+        .service_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #service_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #service_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .service_info_content{
+            backdrop-filter: blur(10px);
+            width: 544px;
+            height: 364px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .service_info_content_title{
+            color: white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 24px;
+            width: 400px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .service_info_content_image{
+            width: 400px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .service_width{
+            width: 100%;
+            max-width: 263px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .testimonial_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #testimonial_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #testimonial_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .testimonial_info_content{
+            backdrop-filter: blur(10px);
+            width: 642px;
+            height: 296px;
+            z-index: 1;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #testimonial_width{
+            width: 100%;
+            max-width: 610px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .testimonial_info_content_upper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 610px;
+            height: 120px;
+            gap: 16px;
+            padding-bottom: 8px;
+        }
+        #pi_pic{
+            width: 120px;
+            height: 120px;
+        }
+        #testimonial_info_content_upper_center{
+            width: 254px;
+            height: 84px;
+            color: white;
+            font-size: 24px;
+            font-family: 'Satoshi', sans-serif;
+        }
+        #testimonial_name{
+            padding-bottom: 8px;
+        }
+        #testimonial_position{
+            opacity: 70%;
+        }
+        .testimonial_info_content_lower{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 610px;
+            height: 120px;
+        }
+        #testimonial_lower_info{
+            color: white;
+            font-size: 24px;
+            font-family: 'Satoshi', sans-serif;
+        }
+        .contact_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #contact_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #contact_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 703px;
+            flex-wrap: wrap;
+        }
+        #input_name{
+            width: 342px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            margin-right: 15px;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        #input_name::placeholder{
+            color: white;
+        }
+        #input_email{
+            width: 342px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        #input_email::placeholder{
+            color: white;
+        }
+        #company_name{
+            margin-top: 16px;
+            width: 704px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        #company_name::placeholder{
+            color: white;
+        }
+        #service{
+            backdrop-filter: blur(10px);
+            margin-top: 16px;
+            width: 704px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><path d="M0 3l5 5 5-5H0z" fill="%23ffffff"/></svg>'); 
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+        }
+        #service option {
+            background-color: white;
+            color: black;
+        }
+        #services:hover {
+            border-color: #888;
+        }
+        #service::placeholder{
+            color: white;
+        }
+        #project{
+            margin-top: 16px;
+            width: 703px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        #project::placeholder{
+            color: white;
+        }
+        #submit_button{
+            margin-top: 16px;
+            width: 703px;
+            height: 64px;
+            border-radius: 16px;
+            background-color: rgba(71, 231, 71, 1);
+            border: 1px solid rgba(71, 231, 71, 1)e;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color:black;
+        }
+        .question_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #question_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #question_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .questions{
+            backdrop-filter: blur(10px);
+            width: 1120px;
+            height: 78px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            margin-bottom: 16px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 600px;
+        }
+        .ques_content{
+            color: white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            width: 428px;
+            height: auto;
+        }
+        #footer{
+            background-color: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            height: 256px;
+            z-index: 10;
+            position:absolute;
+            top: 4948px;
+            
+        }#upper_footer{
+            width: 100%;
+            height: 192px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 250px;
+        }
+        #upper_footer_left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 550px;
+        }
+        #upper_footer_ellora_pic{
+            width: 128px;
+            height: 128px;
+        }
+        #upper_footer_quote{
+            font-family: 'Satoshi', sans-serif;
+            font-size: 24px;
+            width: 260px;
+            color: white;
+        }
+        #upper_footer_right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 450px;
+            flex-wrap: wrap;
+        }
+        #upper_links{
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            color: white;
+        }
+        #upper_icons{
+            padding-top: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+        }
+        .icons{
+            width: 50px;
+            height: 50px;
+        }
+        #lower_footer{
+            width: 100%;
+            height: 64px;
+            border-top: 1px solid rgba(253, 253, 253, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #lower_footer_content{
+            width: auto;
+            height: auto;
+            font-size: 16;
+            font-weight: 400;
+            font-family: 'Satoshi', sans-serif;
+            color:white;
+        }
+        #menu{
+            display: none;
+        }
+    }
+    @media screen and (min-width: 440px) and (max-width: 1024px) {
+        body{
+            margin: 0px;
+            width: 100%;
+            padding: 0%;
+            background: linear-gradient(to bottom,#1A2B44,#455D82);
+            height: 5900px;
+        }
+        .header{
+            width: 100%;
+            height: 600px;
+        }
+        #navbar{
+            position: absolute;
+            top: 17px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 1000;
+        }
+        #nav{
+            width: 90%;
+            max-width: 1248px;
+            height: 96px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(69, 93, 130, 0.2);
+            gap: 15%;
+            backdrop-filter: blur(10px);
+        }
+        #hyper_collection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav_hyper{
+            width: auto;
+            height: auto;
+            color: white;
+            font-size: 16px;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 400;
+        }
+        #work{
+            border: 3px solid white;
+            width: 134px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 16px;
+            font-family: 'Satoshi', sans-serif;
+      
+        }
+        #star_pic{
+            position: absolute;
+            top: 132px;
+            left: 482px;
+            width: 82px;
+            height: 82px;
+        }
+        #main_content{
+            flex: 1;
+            position: absolute;
+            top: 164px;
+            width: 100%;
+            height: 525px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 1;
+        }
+        #left_side_main_content{
+            display: flex;
+            justify-content: flex-start;
+            align-items:start;
+            max-width: 450px;
+            height: auto;
+            flex-wrap: wrap;
+        }
+        #main_heading{
+            font-family: 'Satoshi', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            width: 300px;
+        }
+        #you_span{
+            color: #47E747;
+        }
+        #sub_heading{
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        #button_req{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            width: 468px;
+            height: 64px;
+            border-radius: 16px;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(51, 51, 51, 1);
+            background-color: #47E747;
+        }
+        #person_pic{
+            height: 400px;
+        }
+        #star2_pic{
+            position: absolute;
+            top: 584px;
+            left: 500px;
+            width: 48px;
+            height: 48px;
+        }
+        #circle_dot{
+            position: absolute;
+            top: 200px;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            gap: 200px;
+        }
+        #circle{
+            border-radius: 100%;
+            width: 382px;
+            height: 382px;
+            background-color: rgba(69, 93, 130, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        #dot_pic{
+            backdrop-filter: blur(10px);
+        }
+        #ellora_white_bg{
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #ellora_pic{
+            filter: brightness(100%);
+            width: 56px;
+            height: 56px;
+        }
+        #main{
+            display: flex; 
+            justify-content: center;
+            align-items: center; 
+            position:absolute;
+            top: 800px;
+            width: 100%;
+            height: 4120px;
+            flex-wrap: wrap;
+
+        }
+        .about_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #about_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #about_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .about_info_content{
+            backdrop-filter: blur(10px);
+            width: 410px;
+            height: 300px;
+            z-index: 1;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            display: flex;
+            justify-content: center;
+        }
+        .about_width{
+            width: 100%;
+            max-height: 200px;
+            max-width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 32px;
+        }
+        .about_info_content_title{
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 600;
+            font-size:  32px;
+            color: white;
+            height: auto;
+        }
+        .about_info_content_data{
+            font-family: 'Satoshi', sans-serif;
+            font-size:  16px;
+            color: white;
+            opacity: 70%;
+            height: 300px;
+        }
+        .about_info_content_padding{
+            padding-top: 24px;
+        }
+        .work_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #work_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #work_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .work_info_content{
+            backdrop-filter: blur(10px);
+            width: 410px;
+            height: 364px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            color: white;
+            font-size: 24px;
+            font-family: 'Satoshi', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 0px;
+        }
+        .work_width{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 370px;
+            height: auto;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .work_info_content_image{
+            width: 370px;
+            height: 200px;
+        }
+        .work_info_content_data{
+            font-size: 16px;
+            width: 516px;
+        }
+        #work_box_row{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .work_box{
+            border: 1px solid white;
+            border-radius: 16px;
+            font-size: 14px;
+            padding: 8px;
+        }
+        .about_info_content_header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+        .bold_work{
+            font-weight: 600;
+        }
+        .service_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #service_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #service_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .service_info_content{
+            backdrop-filter: blur(10px);
+            width: 410px;
+            height: 364px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .service_info_content_title{
+            color: white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 24px;
+            width: 400px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .service_info_content_image{
+            width: 400px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .service_width{
+            width: 100%;
+            max-width: 263px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .testimonial_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #testimonial_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #testimonial_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .testimonial_info_content{
+            backdrop-filter: blur(10px);
+            width: 642px;
+            height: 296px;
+            z-index: 1;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #testimonial_width{
+            width: 100%;
+            max-width: 610px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .testimonial_info_content_upper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 610px;
+            height: 120px;
+            gap: 16px;
+            padding-bottom: 8px;
+        }
+        #pi_pic{
+            width: 120px;
+            height: 120px;
+        }
+        #testimonial_info_content_upper_center{
+            width: 254px;
+            height: 84px;
+            color: white;
+            font-size: 24px;
+            font-family: 'Satoshi', sans-serif;
+        }
+        #testimonial_name{
+            padding-bottom: 8px;
+        }
+        #testimonial_position{
+            opacity: 70%;
+        }
+        .testimonial_info_content_lower{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 610px;
+            height: 120px;
+        }
+        #testimonial_lower_info{
+            color: white;
+            font-size: 24px;
+            font-family: 'Satoshi', sans-serif;
+        }
+        .contact_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #contact_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #contact_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 703px;
+            flex-wrap: wrap;
+        }
+        #input_name{
+            width: 342px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            margin-right: 15px;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        #input_name::placeholder{
+            color: white;
+        }
+        #input_email{
+            width: 342px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        #input_email::placeholder{
+            color: white;
+        }
+        #company_name{
+            margin-top: 16px;
+            width: 704px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        #company_name::placeholder{
+            color: white;
+        }
+        #service{
+            backdrop-filter: blur(10px);
+            margin-top: 16px;
+            width: 704px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><path d="M0 3l5 5 5-5H0z" fill="%23ffffff"/></svg>'); 
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+        }
+        #service option {
+            background-color: white;
+            color: black;
+        }
+        #services:hover {
+            border-color: #888;
+        }
+        #service::placeholder{
+            color: white;
+        }
+        #project{
+            margin-top: 16px;
+            width: 703px;
+            height: 64px;
+            text-indent: 16px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            border: 1px solid white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            color:white;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        #project::placeholder{
+            color: white;
+        }
+        #submit_button{
+            margin-top: 16px;
+            width: 703px;
+            height: 64px;
+            border-radius: 16px;
+            background-color: rgba(71, 231, 71, 1);
+            border: 1px solid rgba(71, 231, 71, 1)e;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color:black;
+        }
+        .question_section{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #question_heading{
+            width: 100%;
+            height: auto;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size:32px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+        #question_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1120px;
+            flex-wrap: wrap;
+        }
+        .questions{
+            backdrop-filter: blur(10px);
+            width: 684px;
+            height: 64px;
+            border-radius: 16px;
+            background-color: rgba(69, 93, 130, 0.2);
+            margin-bottom: 16px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 45%;
+        }
+        .ques_content{
+            color: white;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            width: 300px;
+            height: auto;
+        }
+        #footer{
+            background-color: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            height: 256px;
+            z-index: 10;
+            position:absolute;
+            top: 4948px;
+            
+        }#upper_footer{
+            width: 100%;
+            height: 192px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+        #upper_footer_left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 350px;
+        }
+        #upper_footer_ellora_pic{
+            width: 128px;
+            height: 128px;
+        }
+        #upper_footer_quote{
+            font-family: 'Satoshi', sans-serif;
+            font-size: 24px;
+            width: 260px;
+            color: white;
+        }
+        #upper_footer_right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 450px;
+            flex-wrap: wrap;
+        }
+        #upper_links{
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            color: white;
+        }
+        #upper_icons{
+            padding-top: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+        }
+        .icons{
+            width: 50px;
+            height: 50px;
+        }
+        #lower_footer{
+            width: 100%;
+            height: 64px;
+            border-top: 1px solid rgba(253, 253, 253, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #lower_footer_content{
+            width: auto;
+            height: auto;
+            font-size: 16;
+            font-weight: 400;
+            font-family: 'Satoshi', sans-serif;
+            color:white;
+        }
+        #menu{
+            display: none;
+        }
+    }
+        /*
+        @media screen and (max-width: 440px) {
+            body{
+                margin: 0px;
+                width: 100%;
+                padding: 0%;
+                background: linear-gradient(to bottom,#1A2B44,#455D82);
+                background-image: url('/static/ellora_app/images/bg5.png');
+                background-
+                /* opacity:90%;
+                filter: brightness(40%); 
+                height:auto;
+            }
+            .header{
+                width: 100%;
+                height: 734px;
+            } 
+             #bg_pic{
+                width: 100%;
+                height: 5200px;
+                z-index: 1;
+                opacity:90%;
+                filter: brightness(40%);
+            }  
+            #navbar{
+                position: absolute;
+                top: 17px;
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                z-index: 1000;
+            }
+            #nav{
+                width: 400px;
+                height: 64px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(69, 93, 130, 0.2);
+                gap: 332px;
+                backdrop-filter: blur(10px);
+            }
+            #menu{
+                
+            }
+            #hyper_collection{
+                display: none;
+            }
+            .nav_hyper{
+                width: auto;
+                height: auto;
+                color: white;
+                font-size: 16px;
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 400;
+            }
+            #work{
+                border: 3px solid white;
+                width: 100px;
+                height: 52px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                border-radius: 16px;
+                font-family: 'Satoshi', sans-serif;
+        
+            }
+            #star_pic{
+                position: absolute;
+                top: 132px;
+                left: 782px;
+                width: 82px;
+                height: 82px;
+            }
+            #main_content{
+                position: absolute;
+                top: 164px;
+                width: 100%;
+                height: 525px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 150px;
+                z-index: 1;
+            }
+            #left_side_main_content{
+                display: flex;
+                justify-content: center;
+                align-items:start;
+                max-width: 600px;
+                height: auto;
+                flex-wrap: wrap;
+            }
+            #main_heading{
+                font-family: 'Satoshi', sans-serif;
+                font-size: 64px;
+                font-weight: 700;
+                color: white;
+            }
+            #you_span{
+                color: #47E747;
+            }
+            #sub_heading{
+                font-family: 'Satoshi', sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                color: white;
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
+            #button_req{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                width: 668px;
+                height: 72px;
+                border-radius: 16px;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 24px;
+                font-weight: 600;
+                color: rgba(51, 51, 51, 1);
+                background-color: #47E747;
+            }
+            #person_pic{
+                height: 500px;
+            }
+            #star2_pic{
+                position: absolute;
+                top: 584px;
+                left: 764px;
+                width: 48px;
+                height: 48px;
+            }
+            #circle_dot{
+                position: absolute;
+                top: 200px;
+                display: flex;
+                justify-content:center ;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                gap: 450px;
+            }
+            #circle{
+                border-radius: 100%;
+                width: 492px;
+                height: 492px;
+                background-color: rgba(69, 93, 130, 0.2);
+                backdrop-filter: blur(10px);
+                
+            }
+            #dot_pic{
+                backdrop-filter: blur(10px);
+            }
+            #ellora_white_bg{
+                width: 56px;
+                height: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #ellora_pic{
+                filter: brightness(100%);
+                width: 56px;
+                height: 56px;
+            }
+            #main{
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                position:absolute;
+                top: 800px;
+                width: 100%;
+                height: 4120px;
+                flex-wrap: wrap;
+
+            }
+            .about_section{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #about_heading{
+                width: 100%;
+                height: auto;
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size:32px;
+                color: white;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 32px;
+            }
+            #about_info{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                max-width: 1120px;
+                flex-wrap: wrap;
+            }
+            .about_info_content{
+                backdrop-filter: blur(10px);
+                width: 544px;
+                height: 300px;
+                z-index: 1;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                display: flex;
+                justify-content: center;
+            }
+            .about_width{
+                width: 100%;
+                max-height: 200px;
+                max-width: 350px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding-top: 32px;
+            }
+            .about_info_content_title{
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 600;
+                font-size:  32px;
+                color: white;
+                height: auto;
+            }
+            .about_info_content_data{
+                font-family: 'Satoshi', sans-serif;
+                font-size:  16px;
+                color: white;
+                opacity: 70%;
+                height: 300px;
+            }
+            .about_info_content_padding{
+                padding-top: 24px;
+            }
+            .work_section{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #work_heading{
+                width: 100%;
+                height: auto;
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size:32px;
+                color: white;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 32px;
+            }
+            #work_info{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                max-width: 1120px;
+                flex-wrap: wrap;
+            }
+            .work_info_content{
+                backdrop-filter: blur(10px);
+                width: 410px;
+                height: 364px;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                color: white;
+                font-size: 24px;
+                font-family: 'Satoshi', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 16px 0px;
+            }
+            .work_width{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 370px;
+                height: auto;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .work_info_content_image{
+                width: 370px;
+                height: 200px;
+            }
+            .work_info_content_data{
+                font-size: 16px;
+                width: 516px;
+            }
+            #work_box_row{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 8px;
+                margin-top: 16px;
+            }
+            .work_box{
+                border: 1px solid white;
+                border-radius: 16px;
+                font-size: 14px;
+                padding: 8px;
+            }
+            .about_info_content_header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+            }
+            .bold_work{
+                font-weight: 600;
+            }
+            .service_section{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #service_heading{
+                width: 100%;
+                height: auto;
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size:32px;
+                color: white;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 32px;
+            }
+            #service_info{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                max-width: 1120px;
+                flex-wrap: wrap;
+            }
+            .service_info_content{
+                backdrop-filter: blur(10px);
+                width: 544px;
+                height: 364px;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .service_info_content_title{
+                color: white;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 24px;
+                width: 400px;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .service_info_content_image{
+                width: 400px;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .service_width{
+                width: 100%;
+                max-width: 263px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .testimonial_section{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #testimonial_heading{
+                width: 100%;
+                height: auto;
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size:32px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 32px;
+            }
+            #testimonial_info{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                max-width: 1120px;
+                flex-wrap: wrap;
+            }
+            .testimonial_info_content{
+                backdrop-filter: blur(10px);
+                width: 642px;
+                height: 296px;
+                z-index: 1;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #testimonial_width{
+                width: 100%;
+                max-width: 610px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .testimonial_info_content_upper{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 610px;
+                height: 120px;
+                gap: 16px;
+                padding-bottom: 8px;
+            }
+            #pi_pic{
+                width: 120px;
+                height: 120px;
+            }
+            #testimonial_info_content_upper_center{
+                width: 254px;
+                height: 84px;
+                color: white;
+                font-size: 24px;
+                font-family: 'Satoshi', sans-serif;
+            }
+            #testimonial_name{
+                padding-bottom: 8px;
+            }
+            #testimonial_position{
+                opacity: 70%;
+            }
+            .testimonial_info_content_lower{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 610px;
+                height: 120px;
+            }
+            #testimonial_lower_info{
+                color: white;
+                font-size: 24px;
+                font-family: 'Satoshi', sans-serif;
+            }
+            .contact_section{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #contact_heading{
+                width: 100%;
+                height: auto;
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size:32px;
+                color: white;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 32px;
+            }
+            #contact_info{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                max-width: 703px;
+                flex-wrap: wrap;
+            }
+            #input_name{
+                width: 342px;
+                height: 64px;
+                text-indent: 16px;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                border: 1px solid white;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                color:white;
+                margin-right: 15px;
+                box-sizing: border-box;
+                backdrop-filter: blur(10px);
+            }
+            #input_name::placeholder{
+                color: white;
+            }
+            #input_email{
+                width: 342px;
+                height: 64px;
+                text-indent: 16px;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                border: 1px solid white;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                color:white;
+                box-sizing: border-box;
+                backdrop-filter: blur(10px);
+            }
+            #input_email::placeholder{
+                color: white;
+            }
+            #company_name{
+                margin-top: 16px;
+                width: 704px;
+                height: 64px;
+                text-indent: 16px;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                border: 1px solid white;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                color:white;
+                box-sizing: border-box;
+                backdrop-filter: blur(10px);
+            }
+            #company_name::placeholder{
+                color: white;
+            }
+            #service{
+                backdrop-filter: blur(10px);
+                margin-top: 16px;
+                width: 704px;
+                height: 64px;
+                text-indent: 16px;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                border: 1px solid white;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                color:white;
+                appearance: none;
+                background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><path d="M0 3l5 5 5-5H0z" fill="%23ffffff"/></svg>'); 
+                background-repeat: no-repeat;
+                background-position: right 20px center;
+            }
+            #service option {
+                background-color: white;
+                color: black;
+            }
+            #services:hover {
+                border-color: #888;
+            }
+            #service::placeholder{
+                color: white;
+            }
+            #project{
+                margin-top: 16px;
+                width: 703px;
+                height: 64px;
+                text-indent: 16px;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                border: 1px solid white;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                color:white;
+                box-sizing: border-box;
+                backdrop-filter: blur(10px);
+            }
+            #project::placeholder{
+                color: white;
+            }
+            #submit_button{
+                margin-top: 16px;
+                width: 703px;
+                height: 64px;
+                border-radius: 16px;
+                background-color: rgba(71, 231, 71, 1);
+                border: 1px solid rgba(71, 231, 71, 1)e;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color:black;
+            }
+            .question_section{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #question_heading{
+                width: 100%;
+                height: auto;
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size:32px;
+                color: white;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 32px;
+            }
+            #question_info{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 1120px;
+                flex-wrap: wrap;
+            }
+            .questions{
+                backdrop-filter: blur(10px);
+                width: 1120px;
+                height: 78px;
+                border-radius: 16px;
+                background-color: rgba(69, 93, 130, 0.2);
+                margin-bottom: 16px;
+                border: 1px solid white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 600px;
+            }
+            .ques_content{
+                color: white;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                width: 428px;
+                height: auto;
+            }
+            #footer{
+                background-color: rgba(0, 0, 0, 0.65);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 256px;
+                z-index: 10;
+                position:absolute;
+                top: 4948px;
+                
+            }#upper_footer{
+                width: 100%;
+                height: 192px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 250px;
+            }
+            #upper_footer_left{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                max-width: 550px;
+            }
+            #upper_footer_ellora_pic{
+                width: 128px;
+                height: 128px;
+            }
+            #upper_footer_quote{
+                font-family: 'Satoshi', sans-serif;
+                font-size: 24px;
+                width: 260px;
+                color: white;
+            }
+            #upper_footer_right{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 450px;
+                flex-wrap: wrap;
+            }
+            #upper_links{
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+                color: white;
+            }
+            #upper_icons{
+                padding-top: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+            }
+            .icons{
+                width: 50px;
+                height: 50px;
+            }
+            #lower_footer{
+                width: 100%;
+                height: 64px;
+                border-top: 1px solid rgba(253, 253, 253, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #lower_footer_content{
+                width: auto;
+                height: auto;
+                font-size: 16;
+                font-weight: 400;
+                font-family: 'Satoshi', sans-serif;
+                color:white;
+            } 
+        } */
+    </style>
+</head>
+<body>
+    {% load static %}
+    <div class="wrapper">
+    <header class="header">
+        <!-- <img id="bg_pic" src="{% static 'ellora_app/images/bg5.png' %}"> -->
+        <navbar id="navbar">
+            <div id="nav">
+                <div id="ellora_white_bg">
+                    <img id="ellora_pic" src="{% static 'ellora_app/images/ellora_pic2.png' %}">
+                </div>
+                <img id="menu" src="{% static 'ellora_app/images/menu.png' %}">
+                <div id="hyper_collection">
+                    <div class="nav_hyper">
+                        About
+                    </div>
+                    <div class="nav_hyper">
+                        Services
+                    </div>
+                    <div class="nav_hyper">
+                        Testimonials
+                    </div>
+                    <div class="nav_hyper">
+                        FAQs
+                    </div>
+                </div>
+                <div id="work">
+                    See Work
+                </div>
+            </div>
+        </navbar>
+        <img id="star_pic" src="{% static 'ellora_app/images/star.png' %}">
+        <div id="main_content">
+            <div id="left_side_main_content">
+                <div id="main_heading">Crafting Solutions That Work For <span id="you_span">You.</span></div>
+                <div id="sub_heading">We’re your one-stop agency for UX/UI design, website development, graphic design, and content creation.</div>
+                <div id="button_req">
+                    <div>Request Quote</div><img id="message_pic" src="{% static 'ellora_app/images/message.png' %}">
+                </div>
+            </div>
+            <img id="person_pic" src="{% static 'ellora_app/images/person.png' %}">
+        </div>
+        <div id="circle_dot">
+            <div id="circle"></div>
+            <img id="dot_pic" src="{% static 'ellora_app/images/dot_spots.png' %}">
+        </div>
+        <img id="star2_pic" src="{% static 'ellora_app/images/star.png' %}">
+    </header>
+    <main id="main">
+        <div class="about_section">
+            <div id="about_heading">
+                About
+            </div>
+            <div id="about_info">
+                <div class="about_info_content">
+                    <div class="about_width">
+                        <div class="about_info_content_header">
+                            <img class="about_info_content_image" src="{% static 'ellora_app/images/group.png' %}">
+                            <div class="about_info_content_title">
+                                Who We Are
+                            </div>
+                        </div>
+                        <div class="about_info_content_data about_info_content_padding">
+                            At Ellora Co., we are a creative agency driven by passion and purpose. Our mission is to craft creative solutions and compelling content that elevate brands and resonate with audiences.
+                        </div>
+                    </div>
+                </div>
+                <div class="about_info_content">
+                    <div class="about_width">
+                        <div class="about_info_content_header">
+                            <img class="about_info_content_image" src="{% static 'ellora_app/images/setting.png' %}">
+                            <div class="about_info_content_title">
+                                What We Do
+                            </div>
+                        </div>
+                        <div class="about_info_content_data about_info_content_padding">
+                            Specializing in UX/UI Design, Website Development, Video Editing, and Copywriting, we transform ideas into impactful digital experiences. Whether you're a startup looking to establish your presence or a business seeking to refresh your brand.                        
+                        </div>
+                    </div>
+                </div>
+                <div class="about_info_content">
+                    <div class="about_width">
+                        <div class="about_info_content_header">
+                            <img class="about_info_content_image" src="{% static 'ellora_app/images/trophy.png' %}">
+                            <div class="about_info_content_title">
+                                Why Choose Us?
+                            </div>
+                        </div>
+                        <div class="about_info_content_data">
+                            <ul>
+                                <li>Affordable Excellence: High-quality deliverables that suit your budget.</li>
+                                <li>Seamless Collaboration: A personalized approach to ensure your vision comes to life.</li>
+                                <li>Proven Impact: A growing portfolio of successful projects and happy clients.</li>     
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="about_info_content">
+                    <div class="about_width">
+                        <div class="about_info_content_header">
+                            <img class="about_info_content_image" src="{% static 'ellora_app/images/shield.png' %}">
+                            <div class="about_info_content_title">
+                                Our Promise
+                            </div>
+                        </div>
+                        <div class="about_info_content_data about_info_content_padding">
+                            At Ellora Co., your success is our priority. Let us help you make a lasting impression in a digital-first world.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work_section">
+            <div id="work_heading">
+                Work
+            </div>
+            <div id="work_info">
+                <div class="work_info_content">
+                    <div class="work_width">
+                            <img class="work_info_content_image" src="{% static 'ellora_app/images/eshop.png' %}">
+                            <div>
+                                E-Shop Redesign and UX Research
+                            </div>
+                            <div class="work_info_content_data">
+                                Boosted online sales by <span class="bold_work">45%</span> within three months through an intuitive UI/UX redesign.
+                            </div>
+                            <div id="work_box_row">
+                                <div class="work_box">
+                                    UI/UX
+                                </div>
+                                <div class="work_box">
+                                    Redesign
+                                </div>
+                                <div class="work_box">
+                                    Research
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="work_info_content">
+                    <div class="work_width">
+                        <img class="work_info_content_image" src="{% static 'ellora_app/images/startup.png' %}">
+                        <div>
+                            Tech Startup Brand Identity Launch
+                        </div>
+                        <div class="work_info_content_data">
+                            Created a memorable brand presence, leading to a <span class="bold_work">60%</span> increase in investor interest.
+                        </div>
+                        <div id="work_box_row">
+                            <div class="work_box">
+                                Website Dev
+                            </div>
+                            <div class="work_box">
+                                UI/UX
+                            </div>
+                            <div class="work_box">
+                                Research
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work_info_content">
+                    <div class="work_width">
+                        <img class="work_info_content_image" src="{% static 'ellora_app/images/edtech.png' %}">
+                        <div>
+                            Website for an Ed-Tech Company
+                        </div>
+                        <div class="work_info_content_data">
+                            Improved user engagement by <span class="bold_work">35%</span> and reduced bounce rate by 50%.
+                        </div>
+                        <div id="work_box_row">
+                            <div class="work_box">
+                                UI/UX
+                            </div>
+                            <div class="work_box">
+                                Website Dev
+                            </div>
+                            <div class="work_box">
+                                Deployment
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work_info_content">
+                    <div class="work_width">
+                        <img class="work_info_content_image" src="{% static 'ellora_app/images/social.png' %}">
+                        <div>
+                            Social Campaign Design for a NPO
+                        </div>
+                        <div class="work_info_content_data">
+                            Helped raise <span class="bold_work">$20,000</span> in donations within the first month of the campaign.
+                        </div>
+                        <div id="work_box_row">
+                            <div class="work_box">
+                                UI/UX
+                            </div>
+                            <div class="work_box">
+                                Redesign
+                            </div>
+                            <div class="work_box">
+                                Research
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service_section">
+            <div id="service_heading">
+                Services
+            </div>
+            <div id="service_info">
+                <div class="service_info_content">
+                    <div class="service_width">
+                        <div class="service_info_content_image">
+                            <img id="pen" src="{% static 'ellora_app/images/pen.png' %}">
+                        </div>
+                        <div class="service_info_content_title">
+                            Copywriting
+                        </div>
+                    </div>
+                </div>
+                <div class="service_info_content">
+                    <div class="service_width">
+                        <div class="service_info_content_image">
+                            <img id="figma" src="{% static 'ellora_app/images/figma.png' %}">
+                        </div>
+                        <div class="service_info_content_title">
+                            UI/UX Design
+                        </div>
+                    </div>
+                </div>
+                <div class="service_info_content">
+                    <div class="service_width">
+                        <div class="service_info_content_image">
+                            <img id="film" src="{% static 'ellora_app/images/film.png' %}">
+                        </div>
+                        <div class="service_info_content_title">
+                            Video Editing
+                        </div>
+                    </div>
+                </div>
+                <div class="service_info_content">
+                    <div class="service_width">
+                        <div class="service_info_content_image">
+                            <img id="internet" src="{% static 'ellora_app/images/internet.png' %}">
+                        </div>
+                        <div class="service_info_content_title">
+                            Website Development
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial_section">
+            <div id="testimonial_heading">
+                Testimonials
+            </div>
+            <div id="testimonial_info">
+                <img id="arrow_left_pic" src="{% static 'ellora_app/images/arrow_left.png' %}">
+                <div class="testimonial_info_content">
+                    <div id="testimonial_width">
+                        <div class="testimonial_info_content_upper">
+                            <img id="pi_pic" src="{% static 'ellora_app/images/personal_image.png' %}">
+                            <div id="testimonial_info_content_upper_center">
+                                <div id="testimonial_name">
+                                    Ravi Verma,
+                                </div>
+                                <div id="testimonial_position">
+                                    Owner, Spice Delight
+                                </div>
+                            </div>
+                            <img id="green_stars" src="{% static 'ellora_app/images/green_stars.png' %}">
+                        </div>
+                        <div class="testimonial_info_content_lower">
+                            <div id="testimonial_lower_info">
+                                The Ellora team brought our vision to life! Their creativity and attention to detail in UI/UX design exceeded all expectations. Highly recommend them for anyone looking to elevate their brand.
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <img id="arrow_right_pic" src="{% static 'ellora_app/images/arrow_right.png' %}">
+            </div>
+        </div>
+
+        <div class="contact_section">
+            <div id="contact_heading">
+                Contact
+            </div>
+            <div id="contact_info">
+                <form action="" method="post">
+                <input id="input_name" type="text" name="name" placeholder="Name" required>
+                <input id="input_email" type="text" name="email" placeholder="Email" required>
+                <input id="company_name" type="text" name="company" placeholder="Company Name" required>
+                <select name="service" id="service" required>
+                    <option value="" disabled selected>Services</option>
+                    <option value="service_1">United States</option>
+                    <option value="service_2">Canada</option>
+                    <option value="service_3">United Kingdom</option>
+                    <option value="service_4">Australia</option>
+                    <option value="service_5">India</option>
+                  </select>
+                <input id="project" type="text" name="project" placeholder="Describe Project" required>
+                <input id="submit_button" type="submit" name="submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="question_section">
+            <div id="question_heading">
+                Frequently Asked Question
+            </div>
+            <div id="question_info">
+                <div class="questions">
+                    <div class="ques_content">
+                        How do I get started with Ellora Agency?
+                    </div>
+                    <img class="arrow_down_pic" src="{% static 'ellora_app/images/arrow_down.png' %}">
+                </div>
+                <div class="questions">
+                    <div class="ques_content">
+                        Can you accommodate tight deadlines?
+                    </div>
+                    <img class="arrow_down_pic" src="{% static 'ellora_app/images/arrow_down.png' %}">
+                </div>
+                <div class="questions">
+                    <div class="ques_content">
+                        What payment methods do you accept?
+                    </div>
+                    <img class="arrow_down_pic" src="{% static 'ellora_app/images/arrow_down.png' %}">
+                </div>
+                <div class="questions">
+                    <div class="ques_content">
+                        What is your pricing structure?
+                    </div>
+                    <img class="arrow_down_pic" src="{% static 'ellora_app/images/arrow_down.png' %}">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div id="upper_footer">
+            <div id="upper_footer_left">
+                <img id="upper_footer_ellora_pic" src="{% static 'ellora_app/images/ellora_pic3.png' %}">
+                <div id="upper_footer_quote">The Future of Digital, Built Today.</div>
+            </div>
+            <div id="upper_footer_right">
+                <div id="upper_links">
+                    <div class="upper_links_content">
+                        Terms of Service
+                    </div>
+                    <div class="upper_links_content">
+                        Privacy Policy
+                    </div>
+                    <div class="upper_links_content">
+                        ellora.work@gmail.com
+                    </div>
+                </div>
+                <div id="upper_icons">
+                    <img class="icons" src="{% static 'ellora_app/images/instagram.png' %}">
+                    <img class="icons" src="{% static 'ellora_app/images/facebook.png' %}">
+                    <img class="icons"  src="{% static 'ellora_app/images/twitter.png' %}">
+                    <img class="icons"  src="{% static 'ellora_app/images/linkedin.png' %}">
+                </div>
+            </div>
+        </div>
+
+        <div id="lower_footer">
+            <div id="lower_footer_content">
+                © 2025 Ellora Co. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
