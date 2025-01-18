@@ -7,6 +7,9 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
     <style>
     @media screen and (min-width:1024px) and (max-width: 1920px){
+        #arrow_right_pic,#arrow_left_pic {
+            cursor: pointer; 
+        }
         .div{
             width: 100%;
             height: 50px;
@@ -19,88 +22,98 @@
         html{
             scroll-behavior: smooth;
         }
-        body{
-            margin: 0px;
-            width: 100%;
-            padding: 0%;
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
             background-image: url(static/ellora_app/images/bg7.png);
-            height: auto;
         }
-        .header{
-            width: 100%;
-            height: 734px;
+        .header {
+        width: 100vw; 
+        height: 80vh; 
         }
-        #navbar{
-            position: absolute;
-            top: 17px;
-            width: 100%;
-            height: auto;
+        #navbar {
+            position: fixed; 
+            top: 1.7vh; 
+            width: 100%; 
             display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            z-index: 1000;
+            justify-content: center; 
+            align-items: center; 
+            z-index: 1000; 
         }
-        #nav{
+
+        #nav {
             width: 90%;
-            max-width: 1248px;
-            height: 96px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(69, 93, 130, 0.2);
-            gap: 25%;
-            backdrop-filter: blur(10px);
+            max-width: 1248px; 
+            height: 12vh; 
+            border-radius: 2vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background-color: rgba(69, 93, 130, 0.2); 
+            gap: 25%; 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px); 
         }
-        #hyper_collection{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
+
+        #hyper_collection {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 2vw;
         }
-        .nav_hyper{
-            width: auto;
-            height: auto;
-            color: white;
-            font-size: 16px;
-            font-family: 'Satoshi', sans-serif;
-            font-weight: 400;
+
+        .nav_hyper {
+            width: auto; 
+            height: auto; 
+            color: white; 
+            font-size: 2.5vh; 
+            font-family: 'Satoshi', sans-serif; 
+            font-weight: 400; 
         }
-        .nav_hyper_anchor{
-            text-decoration: none;
-            color: white;
+
+        .nav_hyper_anchor {
+            text-decoration: none; 
+            color: white; 
+            transition: color 0.3s ease; 
         }
+
+        .nav_hyper_anchor:hover {
+            color: #47E747; 
+        }
+
         #work{
             border: 3px solid white;
-            width: 134px;
-            height: 52px;
+            width: 8vw;
+            height: 8vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
             border-radius: 16px;
             font-family: 'Satoshi', sans-serif;
-      
         }
+
         #star_pic{
             position: absolute;
-            top: 132px;
-            left: 782px;
-            width: 82px;
-            height: 82px;
+            top: 19vh;
+            left: 60vw;
+            width: 8.5vw;
+            height: 8.5vw;
         }
         #main_content{
             position: absolute;
-            top: 164px;
+            top: 22.8vh;
             width: 100%;
-            height: 525px;
+            height: 65.6vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 150px;
+            gap: 8vw;
             z-index: 1;
         }
+
         #left_side_main_content{
             display: flex;
             justify-content: center;
@@ -140,6 +153,10 @@
             color: rgba(51, 51, 51, 1);
             background-color: #47E747;
         }
+        #button_req:hover{
+            color: #47E747;
+            background-color: rgba(51, 51, 51, 1);
+        }
         #person_pic{
             height: 500px;
         }
@@ -160,13 +177,35 @@
             height: auto;
             gap: 450px;
         }
-        #circle{
-            border-radius: 100%;
-            width: 492px;
-            height: 492px;
+        #circle {
+            width: 30vw;
+            height: 30vw;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             background-color: rgba(69, 93, 130, 0.2);
             backdrop-filter: blur(10px);
-            
+            animation: morph 10s infinite ease-in-out;
+        }
+        @keyframes morph {
+            0% {
+                transform: translate(10px, 10px) scale(1);
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+            25% {
+                transform: translate(-10px, 5px) scale(1.05);
+                border-radius: 50% 50% 30% 70% / 70% 40% 60% 30%;
+            }
+            50% {
+                transform: translate(5px, -10px) scale(1.1);
+                border-radius: 70% 30% 50% 50% / 50% 60% 40% 70%;
+            }
+            75% {
+                transform: translate(-5px, -5px) scale(1.05);
+                border-radius: 40% 60% 60% 40% / 40% 70% 30% 60%;
+            }
+            100% {
+                transform: translate(10px, 10px) scale(1);
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
         }
         #dot_pic{
             backdrop-filter: blur(10px);
@@ -235,6 +274,10 @@
             background-color: rgba(69, 93, 130, 0.2);
             display: flex;
             justify-content: center;
+            transition: all 500ms ease-in-out;
+        }
+        .about_info_content:hover{
+            border-radius: 79% 21% 74% 26% / 18% 42% 58% 82% ;
         }
         .about_width{
             width: 100%;
@@ -341,6 +384,9 @@
             font-size: 14px;
             padding: 8px;
         }
+        .work_box:hover{
+            color: #47E747;
+        }
         .about_info_content_header{
             display: flex;
             justify-content: center;
@@ -392,6 +438,10 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            transition: all 500ms ease-in-out;
+        }
+        .service_info_content:hover{
+            border-radius: 50% 50% 49% 51% / 50% 50% 50% 50% ;
         }
         .service_info_content_title{
             color: white;
@@ -697,6 +747,59 @@
             width: 428px;
             height: auto;
         }
+        .popup-overlay {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 1000; 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-box {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        .popup-box h2 {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .popup-box p {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .close-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .close-btn:hover {
+            background-color: #0056b3;
+        }
+        .arrow_down_pic {
+            width: 30px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
         #footer{
             background-color: rgba(0, 0, 0, 0.65);
             backdrop-filter: blur(10px);
@@ -779,6 +882,9 @@
         }
     }
     @media screen and (min-width: 440px) and (max-width: 1024px) {
+        #arrow_right_pic,#arrow_left_pic {
+            cursor: pointer;
+        }
         .div{
             width: 100%;
             height: 50px;
@@ -797,6 +903,7 @@
             padding: 0%;
             background-image: url(static/ellora_app/images/bg7.png);
             height: auto;
+            backdrop-filter: blur(50%);
         }
         .header{
             width: 100%;
@@ -842,6 +949,9 @@
         .nav_hyper_anchor{
             text-decoration: none;
             color: white;
+        }
+        .nav_hyper_anchor:hover {
+            color: #47E747; 
         }
         #work{
             border: 3px solid white;
@@ -914,6 +1024,10 @@
             color: rgba(51, 51, 51, 1);
             background-color: #47E747;
         }
+        #button_req:hover{
+            background-color: rgba(51, 51, 51, 1);
+            color: #47E747;
+        }
         #person_pic{
             height: 400px;
         }
@@ -938,8 +1052,32 @@
             border-radius: 100%;
             width: 382px;
             height: 382px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             background-color: rgba(69, 93, 130, 0.2);
             backdrop-filter: blur(10px);
+            animation: morph 10s infinite ease-in-out;
+        }
+        @keyframes morph {
+            0% {
+                transform: translate(10px, 10px) scale(1);
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+            25% {
+                transform: translate(-10px, 5px) scale(1.05);
+                border-radius: 50% 50% 30% 70% / 70% 40% 60% 30%;
+            }
+            50% {
+                transform: translate(5px, -10px) scale(1.1);
+                border-radius: 70% 30% 50% 50% / 50% 60% 40% 70%;
+            }
+            75% {
+                transform: translate(-5px, -5px) scale(1.05);
+                border-radius: 40% 60% 60% 40% / 40% 70% 30% 60%;
+            }
+            100% {
+                transform: translate(10px, 10px) scale(1);
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
         }
         #dot_pic{
             backdrop-filter: blur(10px);
@@ -1008,6 +1146,10 @@
             background-color: rgba(69, 93, 130, 0.2);
             display: flex;
             justify-content: center;
+            transition: all 500ms ease-in-out;
+        }
+        .about_info_content:hover{
+            border-radius: 79% 21% 74% 26% / 18% 42% 58% 82% ;
         }
         .about_width{
             width: 100%;
@@ -1114,6 +1256,9 @@
             font-size: 14px;
             padding: 8px;
         }
+        .work_box:hover{
+            color: #47E747;
+        }
         .about_info_content_header{
             display: flex;
             justify-content: center;
@@ -1165,6 +1310,10 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            transition: all 500ms ease-in-out;
+        }
+        .service_info_content:hover{
+            border-radius: 50% 50% 49% 51% / 50% 50% 50% 50% ;
         }
         .service_info_content_title{
             color: white;
@@ -1469,6 +1618,59 @@
             font-size: 16px;
             width: 300px;
             height: auto;
+        }
+        .popup-overlay {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 1000; 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-box {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        .popup-box h2 {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .popup-box p {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .close-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .close-btn:hover {
+            background-color: #0056b3;
+        }
+        .arrow_down_pic {
+            width: 30px;
+            height: 20px;
+            transition: transform 0.3s ease;
         }
         #footer{
             background-color: rgba(0, 0, 0, 0.65);
@@ -1844,7 +2046,7 @@
                     </div>
                     
                 </div>
-                <img id="arrow_right_pic" src="static/ellora_app/images/arrow_right.png">
+                <img id="arrow_right_pic" src="static/ellora_app/images/arrow_right.png" onclick="">
             </div>
         </div>
 
@@ -1852,7 +2054,7 @@
 
         <div class="contact_section">
             <div id="contact_heading">
-                Contact
+                Free Consult
             </div>
             <div id="contact_info">
                 <form action="" method="post">
@@ -1883,29 +2085,36 @@
                     <div class="ques_content">
                         How do I get started with Ellora Agency?
                     </div>
-                    <img class="arrow_down_pic" src="static/ellora_app/images/arrow_down.png">
+                    <img class="arrow_down_pic" src="static/ellora_app/images/arrow_down.png" alt="Arrow Down">
                 </div>
                 <div class="questions">
                     <div class="ques_content">
                         Can you accommodate tight deadlines?
                     </div>
-                    <img class="arrow_down_pic" src="static/ellora_app/images/arrow_down.png">
+                    <img class="arrow_down_pic" src="static/ellora_app/images/arrow_down.png" alt="Arrow Down">
                 </div>
                 <div class="questions">
                     <div class="ques_content">
                         What payment methods do you accept?
                     </div>
-                    <img class="arrow_down_pic" src="static/ellora_app/images/arrow_down.png">
+                    <img class="arrow_down_pic" src="static/ellora_app/images/arrow_down.png" alt="Arrow Down">
                 </div>
                 <div class="questions">
                     <div class="ques_content">
                         What is your pricing structure?
                     </div>
-                    <img class="arrow_down_pic" src="static/ellora_app/images/arrow_down.png">
+                    <img class="arrow_down_pic" src="static/ellora_app/images/arrow_down.png" alt="Arrow Down">
                 </div>
             </div>
         </div>
     </main>
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-box">
+            <h2>Question Details</h2>
+            <p id="popup-content"></p>
+            <button class="close-btn" id="close-btn">Close</button>
+        </div>
+    </div>
     <footer id="footer">
         <div id="upper_footer">
             <div id="upper_footer_left">
@@ -1925,10 +2134,10 @@
                     </div>
                 </div>
                 <div id="upper_icons">
-                    <img class="icons" src="static/ellora_app/images/instagram.png">
-                    <img class="icons" src="static/ellora_app/images/facebook.png">
-                    <img class="icons"  src="static/ellora_app/images/twitter.png">
-                    <img class="icons"  src="static/ellora_app/images/linkedin.png">
+                    <a href=""><img class="icons" src="static/ellora_app/images/instagram.png"></a>
+                    <a href=""><img class="icons" src="static/ellora_app/images/facebook.png"></a>
+                    <a href=""><img class="icons"  src="static/ellora_app/images/twitter.png"></a>
+                    <a href=""><img class="icons"  src="static/ellora_app/images/linkedin.png"></a>
                 </div>
             </div>
         </div>
@@ -1940,5 +2149,56 @@
         </div>
     </footer>
     </div>
+
+    <script>
+        const arrowRightPic = document.getElementById('arrow_right_pic');
+        const arrowLeftPic = document.getElementById('arrow_left_pic');
+        const testimonialInfoContents = document.querySelectorAll('.testimonial_info_content');
+        
+        let originalContent = '';
+
+        window.addEventListener('load', function() {
+            testimonialInfoContents.forEach(function(content) {
+                originalContent = content.innerHTML;
+            });
+        });
+
+        arrowRightPic.addEventListener('click', function() {
+            testimonialInfoContents.forEach(function(content) {
+                content.innerHTML = '';
+            });
+        });
+
+        arrowLeftPic.addEventListener('click', function() {
+            testimonialInfoContents.forEach(function(content) {
+                content.innerHTML = originalContent;
+            });
+        });
+        const questions = document.querySelectorAll('.questions');
+        const popupOverlay = document.getElementById('popup-overlay');
+        const popupContent = document.getElementById('popup-content');
+        const closeBtn = document.getElementById('close-btn');
+
+        
+        questions.forEach(function(question) {
+            question.addEventListener('click', function() {
+                const questionText = question.querySelector('.ques_content').innerText;
+                popupContent.innerText = questionText;  
+                popupOverlay.style.display = 'flex'; 
+            });
+        });
+
+        
+        closeBtn.addEventListener('click', function() {
+            popupOverlay.style.display = 'none';
+        });
+
+        
+        popupOverlay.addEventListener('click', function(event) {
+            if (event.target === popupOverlay) {
+                popupOverlay.style.display = 'none'; 
+            }
+        });
+    </script>
 </body>
 </html>
